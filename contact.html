@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+            color: #2a7ae4;
+            margin-top: 20px;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .contact-info, .contact-form, .map-section {
+            margin-bottom: 30px;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            text-align: center;
+        }
+        .contact-info p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        /* Contact Form */
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form button {
+            width: 40%;
+            padding: 10px;
+            background-color: #2a7ae4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #1d5cb8;
+        }
+
+        /* Map Section */
+        .map-section iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h2>Contact Us</h2>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="products.html">Products</a>
+                        <ul class="dropdown">
+                            <li><a href="products.html">Brick Types</a></li>
+                            <li><a href="products.html">Block Types</a></li>
+                            <li><a href="products.html">Specialty Blocks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="shop.html">Shop</a>
+                        <ul class="dropdown">
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="#orders">My Orders</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </nav>
+        </div>
+        <p style="text-align:center;">We’d love to hear from you! Reach out for inquiries, feedback, or support.</p>
+    </header>
+
+    <!-- Contact Page Container -->
+    <div class="contact-container">
+
+        <!-- Contact Information Section -->
+        <section class="contact-info">
+            <h3>Our Office</h3>
+            <p>Address: 123 Legon Hills, Accra, Ghana</p>
+            <p>Email: blocks@gmail.com</p>
+            <p>Phone: (+233) 240-053-426</p>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <h3>Find Us Here</h3>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1984.7374155169987!2d-0.168568!3d5.630367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1020aaf3656f35a5%3A0x93bc1bff928b4e0b!2sHampton%20Square%2C%20East%20Legon!5e0!3m2!1sen!2sgh!4v1602274983412"
+            allowfullscreen="" 
+            loading="lazy"
+            width="100%"
+            height="300"
+            style="border:0; border-radius: 8px;">
+        </iframe>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            if (name && email && message) {
+                alert("Thank you, " + name + "! Your message has been sent successfully.");
+                document.getElementById("contactForm").reset();
+            } else {
+                alert("Please fill in all fields before submitting.");
+            }
+        });
+    </script>
+
+</body>
+</html>

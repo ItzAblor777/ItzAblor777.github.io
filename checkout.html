@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Checkout</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="products.html">Products</a>
+                        <ul class="dropdown">
+                            <li><a href="products.html">Brick Types</a></li>
+                            <li><a href="products.html">Block Types</a></li>
+                            <li><a href="products.html">Specialty Blocks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="shop.html">Shop</a>
+                        <ul class="dropdown">
+                            <li><a href="cart.html">Cart</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="#orders">My Orders</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </nav>
+        </div>
+    </header>
+
+    <h2>Checkout</h2>
+    <div id="checkout-form">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your mobile number" required>
+
+        <label for="network">Select Network:</label>
+        <select id="network" required>
+            <option value="MTN">MTN MoMo</option>
+            <option value="AirtelTigo">AirtelTigo</option>
+            <option value="Vodafone">Vodafone Cash</option>
+        </select>
+
+        <button onclick="processPayment()">Pay Now</button>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
